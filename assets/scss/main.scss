@@ -1,0 +1,20 @@
+@import 'reset';
+@import 'variables';
+
+//Régles générales
+*{
+	box-sizing: border-box;
+}
+h1,h2,input,label,p{
+	font-family: $font;
+}
+body{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+//Pages
+@import 'formulaire';

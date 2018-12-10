@@ -1,0 +1,36 @@
+body{
+	header{
+		h1{
+			font-weight: 700;
+			font-size: 1.5em;
+			margin-bottom: 1em;
+		}
+	}
+	.addTask{
+		border: 2px solid black;
+		padding: 1.3em;
+		h2{
+			font-size: 1.2em;
+			font-weight: 700;
+			margin-bottom: 1em;
+		}
+		form{
+			label{
+				display: block;
+				margin-bottom: 0.8em;
+				vertical-align: bottom;
+			}
+			input[type="submit"]{
+				border: none;
+				color: white;
+				background-color: black;
+				padding: 0.8em 1em;
+				vertical-align: bottom;
+				margin-bottom: 2px;
+			}
+			.error{
+				color: red;
+			}
+		}
+	}
+}

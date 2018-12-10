@@ -4,17 +4,14 @@ $(document).ready(function(){
         e.preventDefault();
  
         $.post(
-            'formulaire.php', // Un script PHP que l'on va créer juste après
+            'assets/page/formulaire.php', // Un script PHP que l'on va créer juste après
             {
-                todo : $("#task").val(),  // Nous récupérons la valeur de nos input que l'on fait passer à formulaire.php
+                todo : $("#task").val()  // Nous récupérons la valeur de nos input que l'on fait passer à formulaire.php
             },
  
             function(data){
- 
-               $('#result').html("yolo");
          
-            },
-            'text'
+            }
          );
     });
 });

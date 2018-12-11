@@ -29,8 +29,13 @@ body{
 				vertical-align: bottom;
 				margin-bottom: 2px;
 			}
-			.error{
-				color: red;
+			.result{
+				.error{
+					color: red;
+				}
+				.correct{
+					color: green;
+				}
 			}
 		}
 	}

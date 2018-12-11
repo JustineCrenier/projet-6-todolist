@@ -85,5 +85,8 @@ body .addTask form input[type="submit"] {
   vertical-align: bottom;
   margin-bottom: 2px; }
 
-body .addTask form .error {
+body .addTask form .result .error {
   color: red; }
+
+body .addTask form .result .correct {
+  color: green; }

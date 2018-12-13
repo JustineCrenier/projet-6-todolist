@@ -1,3 +1,26 @@
+let addingTask = () =>{
+    $('#submit').click(function() {
+        $.post(
+            'assets/page/contenu.php',
+            'false',
+            function getJson(task){
+                $('.wrapper').html(task);
+            },
+            'text' 
+        );
+    }); 
+}
+$(function(){
+    $.post(
+        'assets/page/contenu.php',
+        'false',
+        function getJson(task){
+            $('.wrapper').html(task);
+        },
+        'text' 
+    );
+});
+
 $("#submit").click(function(e){
     e.preventDefault();
 
@@ -17,16 +40,9 @@ $("#submit").click(function(e){
 
         'text'
     );
-    
+    $('#task').val('');
+    addingTask();    
 });
-$('#submit').click(function() {
 
-     $.post(
-        'assets/page/contenu.php', // Le fichier cible côté serveur.
-        'false', // Nous utilisons false, pour dire que nous n'envoyons pas de données.
-        function getJson(todo){
-            $('.todo').append(todo);
-        },
-        'text' // Format des données reçues.
-    );
-});
+addingTask();
+

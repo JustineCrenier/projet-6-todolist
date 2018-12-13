@@ -13,6 +13,17 @@ body{
 	.wrapper{
 		width: 264px;
 		max-width: 264px;
+		.todo{
+			form{
+				input[type='submit']{
+					border: none;
+					color: white;
+					background-color: black;
+					padding: 0.8em 1em;
+					margin:1em 0;
+				}
+			}
+		}
 	}
 	.addTask{
 		form{

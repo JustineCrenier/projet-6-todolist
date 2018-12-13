@@ -11,12 +11,7 @@
 		<h1>My To-Do List</h1>
 	</header>
 	<div class="wrapper">
-		<section class="todo" id="todo">
-			<h2>To do</h2>
-		</section>
-		<section class="archive" id="archive">
-			<h2>Archive</h2>
-		</section>
+		
 	</div>
 	<section class="addTask">
 		<h2>Add a task</h2>

@@ -1,25 +1,24 @@
 let addingTask = () =>{
-    $('#submit').click(function() {
-        $.post(
-            'assets/page/contenu.php',
-            'false',
-            function getJson(task){
-                $('.wrapper').html(task);
-            },
-            'text' 
-        );
-    }); 
-}
-$(function(){
+    let check = [];
+    $('input[type="checkbox"]:checked').each(value => check.push(($("input:checked").get(value)).value));
+    console.log(check);
+    //add task
     $.post(
-        'assets/page/contenu.php',
-        'false',
+        'assets/script/contenu.php',
+        {
+            'check[]' : check
+        },
         function getJson(task){
             $('.wrapper').html(task);
+
+            $('#register').click(function(e){
+                e.preventDefault();
+                addingTask();
+            });  
         },
         'text' 
     );
-});
+}
 
 $("#submit").click(function(e){
     e.preventDefault();
@@ -44,5 +43,11 @@ $("#submit").click(function(e){
     addingTask();    
 });
 
-addingTask();
+$('#submit').click(function(e) {
+    e.preventDefault();
+    addingTask();
+});
 
+$(function(){
+    addingTask();
+});

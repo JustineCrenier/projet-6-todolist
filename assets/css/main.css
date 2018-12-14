@@ -77,6 +77,8 @@ body .wrapper {
     background-color: black;
     padding: 0.8em 1em;
     margin: 1em 0; }
+  body .wrapper .archive div label {
+    text-decoration: line-through; }
 
 body .addTask form label {
   display: block;
